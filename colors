@@ -4,7 +4,7 @@ or      31;01   # ORPHAN
 tw      38;5;47 # STICKY_OTHER_WRITABLE
 ow      38;5;47 # OTHER_WRITABLE
 st      01;34   # STICKY
-di      01;34   # DIR
+di      1;38;2;49;116;143 # DIR
 pi      33      # FIFO
 so      01;35   # SOCK
 bd      33;01   # BLK

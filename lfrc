@@ -29,4 +29,3 @@ set shellopts '-eu'
 set ifs "\n"
 set ruler 'df:acc:progress:selection:filter:ind'
 set cursorpreviewfmt "\033[7m"et sixel
-set sixel
