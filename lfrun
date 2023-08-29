@@ -1,1 +1,3 @@
-/Users/rodionbozenko/bin/lfrun
+#!/bin/sh
+
+lf -config ~/.config/lf/lfrc
