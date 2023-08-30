@@ -29,3 +29,20 @@ set shellopts '-eu'
 set ifs "\n"
 set ruler 'df:acc:progress:selection:filter:ind'
 set cursorpreviewfmt "\033[7m"et sixel
+
+
+cmd trash ${{
+  files=$(printf "$fx" | tr '\n' ';')
+  while [ "$files" ]; do
+    file=${files%%;*}
+
+    trash "$(basename "$file")" > /dev/null 2>&1 &
+    if [ "$files" = "$file" ]; then
+      files=''
+    else
+      files="${files#*;}"
+    fi
+  done
+}}
+
+map T trash
