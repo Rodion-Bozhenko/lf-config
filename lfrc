@@ -45,4 +45,21 @@ cmd trash ${{
   done
 }}
 
+cmd archive ${{
+  declare -a basenames
+  for file in $fx; do
+      basenames+=("$(basename "$file")")
+  done
+  archive_name="archive_$(date +%Y-%m-%d_%H-%M-%S).tar.gz"
+  tar -czf "$archive_name" "${basenames[@]}"
+  lf -remote "send clear"
+}}
+
+cmd unarchive ${{
+  tar -zxf "$fx"
+  rm -rf "$fx"
+}}
+
+map Z archive
+map au unarchive
 map T trash
