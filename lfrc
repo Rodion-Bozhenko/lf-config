@@ -60,6 +60,20 @@ cmd unarchive ${{
   rm -rf "$fx"
 }}
 
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  $EDITOR $ans
+}}
+
 map Z archive
 map au unarchive
 map T trash
+map ad mkdir
+map af mkfile
